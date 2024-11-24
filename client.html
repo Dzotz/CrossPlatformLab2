@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Equation Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .matrix-input {
+            display: grid;
+            gap: 10px;
+        }
+        .matrix-input input {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 10px 20px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Linear Equation Solver</h1>
+    <label for="num-equations">Number of equations:</label>
+    <input type="number" id="num-equations" value="2" min="2" max="10">
+    <button id="generate">Generate Inputs</button>
+
+    <div id="inputs-container" class="matrix-input"></div>
+
+    <div class="button-container">
+        <button id="solve-gaussian">Solve with Gaussian Elimination</button>
+        <button id="solve-cramer">Solve with Cramer's Rule</button>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="solver.js"></script>
+      
+</body>
+</html>
